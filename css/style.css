@@ -38,13 +38,14 @@ h1 {
   overflow: hidden;
 }
 
-/* カウント行・結果行の共通レイアウト */
+/* カウント行・結果行の共通レイアウト（ラベルを上、値を下に縦積み） */
 .count-row,
 .result-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 16px 24px;
+  gap: 8px;
+  padding: 16px 12px;
 }
 
 /* 行を区切る境界線 */
@@ -67,11 +68,12 @@ h1 {
 
 /* 判定結果 */
 .result {
-  font-size: 2.4rem;
+  max-width: 100%;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #2c3e50;
-  word-break: break-all;
-  padding: 0 12px;
+  white-space: nowrap;
+  padding: 4px 16px;
   border-radius: 8px;
 }
 
