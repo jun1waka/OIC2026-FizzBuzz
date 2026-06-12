@@ -11,7 +11,18 @@
     <h1>Fizz Buzz</h1>
 
     <!-- カウンタ及びFizz Buzzの表示を行うエリア -->
-    <div id="display" class="display">0</div>
+    <div class="display">
+      <!-- カウンタの数値を表示 -->
+      <div class="count-row">
+        <span class="label">カウント</span>
+        <span id="count" class="count">0</span>
+      </div>
+      <!-- Fizz Buzzの判定結果を表示 -->
+      <div class="result-row">
+        <span class="label">結果</span>
+        <span id="result" class="result">0</span>
+      </div>
+    </div>
 
     <!-- 操作ボタン -->
     <div class="buttons">

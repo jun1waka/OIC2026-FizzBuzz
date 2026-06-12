@@ -33,31 +33,60 @@ h1 {
 /* カウンタ表示エリア */
 .display {
   margin: 24px 0;
-  padding: 24px;
-  font-size: 3rem;
-  font-weight: bold;
   border-radius: 12px;
   background: #ecf0f1;
-  color: #2c3e50;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  word-break: break-all;
+  overflow: hidden;
 }
 
-/* Fizz Buzz 表示時の色分け */
-.display.fizz {
+/* カウント行・結果行の共通レイアウト */
+.count-row,
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+/* 行を区切る境界線 */
+.count-row {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ラベル（カウント / 結果） */
+.label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* カウントの数値 */
+.count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* 判定結果 */
+.result {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  word-break: break-all;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+/* Fizz Buzz 表示時の色分け（結果のみ） */
+.result.fizz {
   background: #d5f5e3;
   color: #27ae60;
 }
 
-.display.buzz {
+.result.buzz {
   background: #d6eaf8;
   color: #2980b9;
 }
 
-.display.fizzbuzz {
+.result.fizzbuzz {
   background: #fdebd0;
   color: #e67e22;
 }

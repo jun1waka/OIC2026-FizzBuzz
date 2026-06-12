@@ -1,7 +1,8 @@
 // Fizz Buzz プログラム
 
 // DOM要素を取得
-const display = document.getElementById("display");
+const countDisplay = document.getElementById("count");
+const resultDisplay = document.getElementById("result");
 const countButton = document.getElementById("countButton");
 const resetButton = document.getElementById("resetButton");
 
@@ -30,16 +31,19 @@ function getFizzBuzz(num) {
  */
 function updateDisplay() {
   const result = getFizzBuzz(counter);
-  display.textContent = result;
 
-  // 表示の種類に応じてスタイルを切り替える
-  display.classList.remove("fizz", "buzz", "fizzbuzz");
+  // カウントの数値と判定結果をそれぞれ表示
+  countDisplay.textContent = counter;
+  resultDisplay.textContent = result;
+
+  // 結果の種類に応じてスタイルを切り替える
+  resultDisplay.classList.remove("fizz", "buzz", "fizzbuzz");
   if (result === "FizzBuzz") {
-    display.classList.add("fizzbuzz");
+    resultDisplay.classList.add("fizzbuzz");
   } else if (result === "Fizz") {
-    display.classList.add("fizz");
+    resultDisplay.classList.add("fizz");
   } else if (result === "Buzz") {
-    display.classList.add("buzz");
+    resultDisplay.classList.add("buzz");
   }
 }
 
