@@ -1,0 +1,98 @@
+/* 全体のレイアウト */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+/* コンテナ */
+.container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* カウンタ表示エリア */
+.display {
+  margin: 24px 0;
+  padding: 24px;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 12px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+
+/* Fizz Buzz 表示時の色分け */
+.display.fizz {
+  background: #d5f5e3;
+  color: #27ae60;
+}
+
+.display.buzz {
+  background: #d6eaf8;
+  color: #2980b9;
+}
+
+.display.fizzbuzz {
+  background: #fdebd0;
+  color: #e67e22;
+}
+
+/* ボタンエリア */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #3498db;
+  color: #ffffff;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button.reset {
+  background: #95a5a6;
+}
+
+button.reset:hover {
+  background: #7f8c8d;
+}
